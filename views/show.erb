@@ -1,0 +1,15 @@
+<body style="text-align: center; margin: 4em">
+  <h2>Make a bar code:</h2>
+
+  <form method="POST" style="margin-bottom: 6em">
+    <input name="convert" class="field" type="text"/>
+    <input type="submit" value="create"/>
+  </form>
+
+  <% if @raw_png_data %>
+    <h4>Request:</h4>
+    <%= @barcode %>
+    <h4>Result:</h4>
+    <img src="data: image/png; base64, <%= @raw_png_data %>" alt="Red dot" />
+  <% end %>
+</body>
